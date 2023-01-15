@@ -27,3 +27,12 @@ for (let i of button) {
 const btnCloseModel = document.querySelector(".close-Model");
 
 btnCloseModel.addEventListener("click", closeModel);
+
+document.addEventListener("keydown", function (e) {
+  const pressedKey = e.key;
+  console.log(pressedKey);
+
+  if (pressedKey === "Escape" && !popped.classList.contains("hidden")) {
+    closeModel();
+  }
+});
